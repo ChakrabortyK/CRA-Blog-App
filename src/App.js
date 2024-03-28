@@ -24,14 +24,14 @@ function App() {
 
   return (
     <>
-      <div className='min-h-screen flex flex-wrap content-center bg-gray-400'>
+      <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
         <div className='w-full block'>
           <Header />
-          <main>
+          <main className='min-h-screen'>
             <Outlet />
           </main>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </>
   );

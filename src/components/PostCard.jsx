@@ -6,14 +6,11 @@ import { Link } from 'react-router-dom'
 const PostCard = ({ $id, title, featuredImage }) => {
     return (
         <Link to={`/post/${$id}`}>
-            <div className='w-full bg-gray-100 rounded-xl p-4'>
+            <div className='min-w-[60vw] lg:min-w-min bg-gray-100 rounded-md'>
                 <div className='w-full justify-center mb-4'>
-                    <img src={appServiceObj.getFilePreview(featuredImage)} alt={title}
-                        className='rounded-xl' />
-
+                    <img src={appServiceObj.getFilePreview(featuredImage)} alt={title} className='rounded-t' />
                 </div>
-                <h2
-                    className='text-xl font-bold'
+                <h2 className='text-xl font-bold p-3'
                 >{title}</h2>
             </div>
         </Link>
