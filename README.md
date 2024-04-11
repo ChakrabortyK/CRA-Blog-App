@@ -1,70 +1,110 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React & Appwrite Blog
 
-## Available Scripts
+A React project to build a blog website with user login. Industry standard code and  Appwrite service as a backend are used in the project. The project primarily aims towards writing industry standard code and focuses on scalability and modularity.
 
-In the project directory, you can run:
+This documentation aims to guide you through the installation, setup, and usage of our     application.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Client:** React, Redux, TailwindCSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Server:** Appwrite
 
-### `npm test`
+**Real time text editor:** TinyMce
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Other:** react-hook-form, html-react-parser
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Run Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the project
 
-### `npm run eject`
+```bash
+  git clone https://github.com/ChakrabortyK/CRA-Blog-App.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Go to the project directory
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  cd CRA-Blog-App
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  npm install
+```
 
-## Learn More
+Start the server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  npm run start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Obtain your Appwrite project ID and API key.
+- Create a .env file in the project root.
+- To run this project, you will need to add the following environment variables to your .env file
 
-### Analyzing the Bundle Size
+    `REACT_APP_APPWRITE_URL`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    `REACT_APP_APPWRITE_PROJECTID` 
 
-### Making a Progressive Web App
+    `REACT_APP_APPWRITE_DATABASEID` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    `REACT_APP_APPWRITE_COLLECTIONID` 
+    
+    `REACT_APP_APPWRITE_BUCKETID` 
 
-### Advanced Configuration
+These variables are also available in the `.sample.env` file
+## Usage/Examples
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Once the application is running locally, you can access it in your browser at `http://localhost:3000`. Explore the features and functionalities of the application.
 
-### Deployment
+1. ### Navigation Instructions
+Upon launching the application, users are greeted with the home feed where they can view posts from other users **After logging in**. The navigation bar located at the top of the page allows users to access different sections of the application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Home: View the latest posts from all users.
+- My Posts: View all of the posts of your account/user.
+- Add Post: Add a new post from the current account.
 
-### `npm run build` fails to minify
+2. ### Common Tasks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Logging In
+- Click on the "Log In" button located at the top-mid of the page.
+- Enter your registered email address and password.
+- Click "Log In" to access your account.
+    
+#### Signing Up
+
+- On opening the application click on the "Sign Up" button top of the page.
+- Fill out the registration form with your email address, username, and password.
+- Click "Create Account" to create your account.
+
+#### Creating a Post
+
+- Click on the "Add Post" button.
+- Write your message or upload an image.
+- Set your status active or inactive to show or hide post to others.
+- Click "Post" to share your content with your followers.
+
+#### Editing a post
+
+- Click on 'Edit' on post page
+- Edit the neccesary fields
+- Click on submit to save changes
+## API Reference
+
+Our React application communicates with the Appwrite backend through various API endpoints. Refer to the [Appwrite API documentation](https://appwrite.io/docs) for detailed information about available endpoints and their usage.
+
+
+## Features
+
+- User Login/Signup
+- Add post
+- Edit/Delete post
+- Hide Show post
